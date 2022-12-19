@@ -24,8 +24,8 @@ import os
 ##################################################
 current_path = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(current_path, 'config_yamote.ini')
-# config_ini = configparser.ConfigParser()
-# config_ini.read(path, encoding='utf-8')
+config_ini = configparser.ConfigParser()
+config_ini.read(path, encoding='utf-8')
 yamanote_image = os.path.join(current_path, 'yamote.jpg')
 
 ##################################################
@@ -38,7 +38,7 @@ image = Image.open(yamanote_image)
 sf_user = st.secrets["sf_user"]
 sf_password = st.secrets["sf_password"]
 sf_account = st.secrets["sf_account"]
-main_table = st.secrets["main_table"]
+main_table = config_ini['SNOWFLAKE']['MAIN_TABLE']
 # (保存用)ユーザーによっては以下必須
 # sf_role = st.secrets["sf_role"]
 # sf_warehouse = st.secrets["sf_role"]
