@@ -35,13 +35,13 @@ yamanote_image = os.path.join(current_path, 'yamote.jpg')
 image = Image.open(yamanote_image)
 
 # Snowflake情報
-sf_user = st.secrets["sf_user"]
-sf_password = st.secrets["sf_password"]
-sf_account = st.secrets["sf_account"]
+sf_user = st.secrets["SF_USER"]
+sf_password = st.secrets["SF_PASSWORD"]
+sf_account = st.secrets["SF_ACCOUNT"]
 main_table = config_ini['SNOWFLAKE']['MAIN_TABLE']
 # (保存用)ユーザーによっては以下必須
-# sf_role = st.secrets["sf_role"]
-# sf_warehouse = st.secrets["sf_role"]
+# sf_role = st.secrets["SF_ROLE"]
+# sf_warehouse = st.secrets["SF_WAREHOUSE"]
 
 # 運行情報リンク
 link = '[🚞山手線（関東エリア）運行情報・運休情報](https://traininfo.jreast.co.jp/train_info/line.aspx?gid=1&lineid=yamanoteline)'
