@@ -24,8 +24,8 @@ import os
 ##################################################
 current_path = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(current_path, 'config_yamote.ini')
-config_ini = configparser.ConfigParser()
-config_ini.read(path, encoding='utf-8')
+# config_ini = configparser.ConfigParser()
+# config_ini.read(path, encoding='utf-8')
 yamanote_image = os.path.join(current_path, 'yamote.jpg')
 
 ##################################################
@@ -35,13 +35,13 @@ yamanote_image = os.path.join(current_path, 'yamote.jpg')
 image = Image.open(yamanote_image)
 
 # Snowflake情報
-sf_user = config_ini['SNOWFLAKE']['SF_USER']
-sf_password = config_ini['SNOWFLAKE']['SF_PASSWORD']
-sf_account = config_ini['SNOWFLAKE']['SF_ACCOUNT']
-main_table = config_ini['SNOWFLAKE']['MAIN_TABLE']
+sf_user = st.secrets["sf_user"]
+sf_password = st.secrets["sf_password"]
+sf_account = st.secrets["sf_account"]
+main_table = st.secrets["main_table"]
 # (保存用)ユーザーによっては以下必須
-# sf_role = config_ini['SNOWFLAKE']['SF_ROLE']
-# sf_warehouse = config_ini['SNOWFLAKE']['SF_WAREHOUSE']
+# sf_role = st.secrets["sf_role"]
+# sf_warehouse = st.secrets["sf_role"]
 
 # 運行情報リンク
 link = '[🚞山手線（関東エリア）運行情報・運休情報](https://traininfo.jreast.co.jp/train_info/line.aspx?gid=1&lineid=yamanoteline)'
