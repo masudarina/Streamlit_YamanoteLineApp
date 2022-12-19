@@ -24,10 +24,9 @@ import os
 ##################################################
 path = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(path, 'config_yamote.ini')
-current_path = os.path.dirname(os.path.abspath(__file__))
 config_ini = configparser.ConfigParser()
 config_ini.read(path, encoding='utf-8')
-yamanote_image = os.path.join(current_path, 'yamote.jpg')
+yamanote_image = os.path.join(path, 'yamote.jpg')
 
 ##################################################
 # 変数設定
