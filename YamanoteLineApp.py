@@ -26,12 +26,13 @@ path = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(path, 'config_yamote.ini')
 config_ini = configparser.ConfigParser()
 config_ini.read(path, encoding='utf-8')
+yamanote_image = os.path.join(current_path, 'yamote.jpg')
 
 ##################################################
 # 変数設定
 ##################################################
 # 画像のパス
-yamanote_image = config_ini['COMMON']['YAMANOTE_IMAGE']
+
 image = Image.open(yamanote_image)
 
 # Snowflake情報
