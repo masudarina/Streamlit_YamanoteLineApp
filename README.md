@@ -7,6 +7,7 @@
 また、駅の緯度経度や駅間の距離を検索することもできます。
 
 ## 前提条件
+・Streamlit Cloud が使用できること 　アカウント作成ページ：https://share.streamlit.io/signup
 
 ・Snowflakeが使用できること
 
