@@ -29,7 +29,7 @@
 
 	2. Snowflake Web UI右上の[データベース]をクリックし手順1で作成したテーブルを開き、[データをロード]をクリックする
 	
-	3. [ソースファイル]選択画面より、配布したYamanoteLineData.csvを選択し、データをロードする
+	3. 上記のYamanoteLineData.csvを選択し、データをロードする
 
 	参考サイト：
 	https://knowledge.insight-lab.co.jp/snowflake/beginner/local-load
